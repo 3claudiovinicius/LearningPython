@@ -24,6 +24,7 @@ def power(num, x=1):
     return result
 
 # function with variable number of arguments
+# the arrow to the object argument must be always the last element to be called
 def multi_add(*args):
     result = 0
     for x in args:
