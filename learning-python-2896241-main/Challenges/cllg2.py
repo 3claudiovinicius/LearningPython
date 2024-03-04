@@ -1,9 +1,26 @@
 import os
 from os import path
 
+#versao1 pessoal
+
+#def countfiles_bytes():
+#    c=0
+#    cd=os.getcwd()
+#    for x,y,z0 in os.walk(cd):
+#        for z in z0:
+#            nam, ext = os.path.splitext(z)
+#            if ext == 'txt':
+#                w = os.path.join(cd,z)
+#                info = os.stat(w)
+#                c+=info.st_size
+#    return c
+#versao1 pessoal
+
+#versao2 pessoal
 def countfiles_bytes():
     c=0
-    cd=os.getcwd()
+    deps_dir="deps"
+    cd=os.path.join(deps_dir)
     for x,y,z0 in os.walk(cd):
         for z in z0:
             nam, ext = os.path.splitext(z)
@@ -12,6 +29,7 @@ def countfiles_bytes():
                 info = os.stat(w)
                 c+=info.st_size
     return c
+#versao2 pessoal
 
 #versao1 do chat gpt
 #import os
