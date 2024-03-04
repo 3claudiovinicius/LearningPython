@@ -19,17 +19,34 @@ from os import path
 #versao2 pessoal
 def countfiles_bytes():
     c=0
-    deps_dir="deps"
-    cd=os.path.join(deps_dir)
-    for x,y,z0 in os.walk(cd):
-        for z in z0:
+    deps_dir="learning-python-2896241-main/Challenges/test_dir"
+    cd=os.path.join(os.getcwd(),deps_dir)
+    print(cd)
+    for _,_,zou in os.walk(cd):
+        for z in zou:
             nam, ext = os.path.splitext(z)
-            if ext == 'txt':
+            if ext == ".txt":
+                print("Hi")
                 w = os.path.join(cd,z)
                 info = os.stat(w)
                 c+=info.st_size
     return c
 #versao2 pessoal
+
+#versao3 pessoal
+#def file_info():
+#    c=0
+#    deps_dir="deps"
+#    cd=os.path.join(deps_dir)
+#    for _,_,z0 in os.walk(cd):
+#        for z in z0:
+#            nam, ext = os.path.splitext(z)
+#            if ext == '.txt':
+#                w=os.path.join(cd,z)
+#                info=os.stat(w)
+#                c+=info.st_size
+#    return c
+#versao3 pessoal
 
 #versao1 do chat gpt
 #import os
@@ -63,3 +80,9 @@ def countfiles_bytes():
     
 #    return total_bytes
 #versao2 do chat gpt
+
+def main():
+    print(countfiles_bytes())
+
+if __name__ == "__main__":
+    main()
