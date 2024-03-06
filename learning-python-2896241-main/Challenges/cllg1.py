@@ -20,7 +20,9 @@ def is_palindrome(teststr):
     return False
 
 def main():
-    print(str(is_palindrome("ABBA!")) + " Palindrome")
+    str_test="ABBA!"
+    print(str_test)
+    print(str(is_palindrome(str_test)) +" Palindrome")
 
 if __name__ == "__main__":
     main()

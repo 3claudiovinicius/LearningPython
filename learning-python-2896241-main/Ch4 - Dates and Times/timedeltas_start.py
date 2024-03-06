@@ -7,16 +7,18 @@
 from datetime import date
 from datetime import time
 from datetime import datetime
+from datetime import timedelta
 
 
 # TODO: construct a basic timedelta and print it
-
+now=datetime.now()
 
 # TODO: print today's date
-
+test_date=now - timedelta(weeks=4, days=2)
+print("Dia de hoje há 4 semanas e 2 dia", str(test_date))
 
 # TODO: print today's date one year from now
-
+s=test_date.strftime("%A %B %d, %Y")
 
 # TODO: create a timedelta that uses more than one argument
 
