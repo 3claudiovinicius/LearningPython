@@ -26,7 +26,7 @@ def countfiles_bytes():
         for z in zou:
             nam, ext = os.path.splitext(z)
             if ext == ".txt":
-                print("Hi")
+                #print("Hi")
                 w = os.path.join(cd,z)
                 info = os.stat(w)
                 c+=info.st_size
