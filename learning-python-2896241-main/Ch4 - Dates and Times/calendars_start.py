@@ -5,10 +5,16 @@
 
 
 # TODO: import the calendar module
-
+import calendar
 
 # TODO: create a plain text calendar
-
+c = calendar.TextCalendar(calendar.MONDAY)
+#choose_year=2024
+#choose_month=2
+#horiz_spacing=5
+#vert_spacing=1
+#str=c.formatmonth(choose_year,choose_month,horiz_spacing,vert_spacing)
+#print(str)
 
 # TODO: create an HTML formatted calendar
 
