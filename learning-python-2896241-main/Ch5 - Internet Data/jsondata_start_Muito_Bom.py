@@ -15,25 +15,40 @@ def printResults(data,spec_date):
     # now we can access the contents of the JSON like any other Python object
 
     
-    # output the number of events, plus the magnitude and each event name  
+    # Test 1 - output the number of events, plus the magnitude and each event name  
     #key_word="id"
     #cont=0
     #cont=sum(1 for obj in theJSON if key_word in obj)
     #print(cont," events recorded")
     
     # for each event, print the place where it occurred
+
+    str1=set()
+
     for obj in theJSON:
 
+        #Test 2
         #print(obj["titulo"]," \n")
 
         #date_hour=(datetime.strptime(obj["fim_execucao"],"%Y-%m-%d")).date()
         #if date_hour > spec_date:
         #    print(obj["titulo"],"\n",obj["foco_tecnologico"],"\n\n")
-
-        str1={}
+        
+        #Test 3 - must use the for loop from Test 2
         str1.add(obj["foco_tecnologico"])
+    
+    cont2=0
+    dict1={"Foco_Tecnologico":"Numero de projetos"}
+    for element1 in str1:
+        cont1=0
+        for obj in theJSON:
+            if element1==obj["foco_tecnologico"]:
+                cont1+=1
+        dict1.update({element1:cont1})
+        cont2+=cont1
+    
+    #print(cont2) #Just to compare with the output of test 1
 
-        #conitnuar o código para contar o numero total de projetos que tem o mesmo tipo de foco tecnooogico
 
 
     # print the events that only have a magnitude greater than 4
